@@ -1,0 +1,23 @@
+{
+  "name": "solophp/settings",
+  "type": "library",
+  "description": "Managing settings stored in associative array",
+  "keywords": ["settings","php","array"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Vitaliy Olos",
+      "email": "vedastudio@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Solo\\": "Solo/"
+    }
+  },
+  "require": {
+    "php": ">=7.4"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
