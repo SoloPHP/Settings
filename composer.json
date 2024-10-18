@@ -1,0 +1,25 @@
+{
+  "name": "solophp/settings",
+  "type": "library",
+  "description": "Managing application settings stored in a database",
+  "keywords": ["settings","php","array"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Vitaliy Olos",
+      "email": "vedastudio@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Solo\\": "Solo/"
+    }
+  },
+  "require": {
+    "php": ">=7.4",
+    "solophp/database": "^1.3",
+    "solophp/utilities": "main-dev"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
