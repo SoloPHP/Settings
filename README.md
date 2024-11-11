@@ -66,6 +66,14 @@ $settings->set('my_setting', 'new_value');
 $settings->my_setting = 'new_value';
 ```
 
+### Get all Settings
+
+Get all settings as an associative array.:
+
+```php
+$settings->getAll();
+```
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

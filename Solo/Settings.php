@@ -50,6 +50,16 @@ class Settings
     }
 
     /**
+     * Get all settings as an associative array.
+     *
+     * @return array The associative array of all settings.
+     */
+    public function getAll(): array
+    {
+        return $this->settings;
+    }
+
+    /**
      * Set a setting by name.
      *
      * @param string $name The setting name.
