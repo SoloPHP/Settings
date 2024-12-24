@@ -33,7 +33,7 @@ class Settings
     {
         $this->database->query("SELECT name, value FROM ?t", $this->table);
 
-        foreach ($this->database->results() as $setting) {
+        foreach ($this->database->fetchAll() as $setting) {
             $this->settings[$setting->name] = Utilities::isSerialized($setting->value) ? unserialize($setting->value) : $setting->value;
         }
     }
