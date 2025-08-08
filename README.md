@@ -1,5 +1,9 @@
 # Solo Settings
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/solophp/settings.svg?style=flat-square)](https://packagist.org/packages/solophp/settings)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
+[![PHP Version](https://img.shields.io/packagist/php-v/solophp/settings.svg?style=flat-square)](https://packagist.org/packages/solophp/settings)
+
 A simple and efficient PHP settings management package that provides an interface to store and retrieve application settings from a database.
 
 ## Features
@@ -17,8 +21,8 @@ composer require solophp/settings
 
 ## Requirements
 
-- PHP 7.4 or higher
-- solophp/database
+- PHP 8.1+
+- PDO extension
 
 ### Basic Setup
 
@@ -39,11 +43,12 @@ CREATE TABLE `settings` (
 First, create an instance of the `Settings` class:
 
 ```php
-use Solo\Settings;
-use Solo\Database;
+use Solo\Settings\Settings;
 
-$database = new Database(/* your database connection parameters */);
-$settings = new Settings($database, 'settings_table');
+$pdo = new PDO('mysql:host=localhost;dbname=app', 'user', 'pass');
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+$settings = new Settings($pdo, 'settings');
 ```
 
 ### Retrieving Settings
